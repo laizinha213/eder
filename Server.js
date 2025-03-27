@@ -7,7 +7,6 @@ const app = express();
 
 app.use(express.json());
 
-
 app.post('/usuarios', async (req, res) => {
 
     await prisma.user.create({
@@ -69,4 +68,7 @@ app.delete('/usuarios/:id', async (req, res) => {
     res.status(201).json({ mensage: "Usuário deletado com sucesso!" })
 }
 );
-export default app;
+
+app.listen(3000);
+
+module.exports = app;
