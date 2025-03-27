@@ -67,9 +67,6 @@ app.delete('/usuarios/:id', async (req, res) => {
         }
     })
     res.status(201).json({ mensage: "Usuário deletado com sucesso!" })
-})
-
-
-app.listen(4000, () => {
-    console.log('Servidor rodando na porta 4000');
-})
+}
+);
+export default app;
